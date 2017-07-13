@@ -1,0 +1,235 @@
+$backgroungTitle: #e84c3d;
+$backgroundHeader: #333333;
+$backgroundHover: #c1392b;
+$textTitle: #ffdbe2;
+$borderColor: #dbded7;
+$borderRadius: 10px;
+
+/*****Mixin*****/ 
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	  	-ms-border-radius: $radius;
+	  	 	border-radius: $radius;
+}
+
+@mixin border-top-radius($radius){
+	border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+/*********/
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family:sans-serif;
+
+	.header{
+		width: 100%;
+		background: $backgroungTitle;
+
+		.navbar-menu{
+			width: 75%;
+			margin: 0 auto;
+			padding: 13px 0;
+
+			#menu-bars{
+				display: none;
+			}
+			.nav{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li{
+					display: inline-block;
+
+					.menu-list{
+						text-decoration: none;
+						padding: 13px 20px;
+						color: $textTitle;
+
+						&:hover{
+							background: $backgroundHover;
+						}
+					}
+					&.right{
+						float: right;
+					}	
+				}
+			}
+		}
+	}
+	.manage-block{
+		width: 100%;
+		background: $backgroundHeader;
+
+		.logo{
+			width: 75%;
+			margin: 0 auto;
+			padding: 15px 0 20px;
+
+			h1{
+				margin: 0;
+				color: #fff;
+				display: inline-block;
+				
+			}
+			h2{
+				margin: 0;
+				display: inline-block;
+				color: #727272;
+			}
+
+			#dropdownContent{
+				@include border-radius($borderRadius);
+				float: right;
+				outline: none;
+				padding: 10px 5px;	
+			}
+		}
+	}
+	.content{
+		width: 75%;
+		margin: 0 auto;
+
+		.search{
+			width: 98%;
+			background: #ccc;
+			border: none;
+			outline: none;
+			@include border-radius(10px);
+			padding: 15px 0 15px 20px;
+			margin: 20px 0 25px;
+		}
+		aside{
+			width: 330px;
+			float: left;
+
+			.post-list{
+				@include border-radius($borderRadius);
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				border: 1px solid $borderColor;
+
+				li{
+					padding: 10px;
+					border-bottom: 1px solid $borderColor;
+
+					&:last-child{
+						border-bottom: none;
+					}
+
+					&.list-title{
+						@include border-top-radius($borderRadius);
+						background: $backgroungTitle;
+						color: $textTitle;
+					}
+					
+					.posts-count{
+						@include border-radius($borderRadius);
+						float: right;
+						padding: 2px;
+						color:  #fff;
+						background: #787878;
+					}
+				}
+			}
+			.progressBlock{
+				margin-top: 25px;
+				padding: 25px;
+				border: 1px solid $borderColor;
+				@include border-radius($borderRadius);
+
+				.progress-bar{
+					@include border-radius(5px);
+					border: 1px solid $borderColor;
+
+					.progress{
+						@include border-radius(5px);
+						width: 10px;
+						background: black;
+						color: #fff;
+
+						&#diskProgress{
+							width: 166px;
+							text-align: center;
+						}
+						&#percent{
+							width: 100px;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+		section{
+			@include border-radius(10px);
+			width: 1060px;
+			float: right;
+			border: 1px solid $borderColor;
+			
+			
+			div{
+				@include border-top-radius($borderRadius);
+				width: 100%;
+				background: $backgroungTitle;
+				color: $textTitle;
+				padding: 15px 0 15px 20px;
+				box-sizing: border-box;
+			}
+			#filter{
+				width: 96%;
+				@include border-radius($borderRadius);
+				outline: none;
+				border: 1px solid $borderColor;
+				padding: 15px;
+				margin: 20px;
+				box-sizing: border-box;
+			}
+			table{
+				width: 96%;
+				margin: 25px 20px;
+				border-collapse: collapse;
+			
+				tr{
+					border-top: 2px solid $borderColor;	
+
+					&:nth-child(odd){
+						background: #f9f9f9;
+					}
+				}
+
+				th{
+					text-align: left;
+					padding: 15px;	
+				}
+				td{
+					padding: 15px 0 25px 15px;
+				}
+
+				input{
+					@include border-radius($borderRadius);
+					padding: 15px;
+					outline: none;
+
+					&.editBtn{
+						border: 1px solid $borderColor;
+						background: none;
+					}
+					&.deleteBtn{
+						border:none;
+						background: $backgroungTitle;
+						color: $textTitle;
+					}
+				}	
+			}
+		}
+	}
+
+
+	@import "style480";
+}

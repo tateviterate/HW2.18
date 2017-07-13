@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>AdminStrap</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="header">
+		<div class="navbar-menu">
+			<div id="menu-bars">
+				<i class="fa fa-bars fa-2x"  aria-hidden="true"></i>
+			</div>
+				<ul class="nav">
+					<li><a href="#" class="menu-list">AdminStrap</a></li>
+					<li><a href="#" class="menu-list">Dashboard</a></li>
+					<li><a href="#" class="menu-list">Pages</a></li>
+					<li><a href="#" class="menu-list">Posts</a></li>
+					<li><a href="#" class="menu-list">Users</a></li>
+
+					<li class="right"><a href="" class="menu-list">Logout</a></li>
+					<li class="right"><a href="" class="menu-list">Welcome, Brad</a></li>
+				</ul>
+		</div>
+	</div>
+
+		<div class="manage-block">
+			<div class="logo">
+				<h1><i class="fa fa-cog  logo-icon" aria-hidden="true"></i>
+				Pages</h1>
+				<h2>Manage Your Pages</h2>
+				<select name="" id="dropdownContent">
+					<option value="">Create Content</option>
+				</select>
+			</div>
+		</div>
+		<div class="content">
+			<input type="text" class="search" placeholder="Pages">
+
+			<aside>
+				<ul class="post-list">
+					<li class="list-title">
+						<i class="fa fa-cog " aria-hidden="true"></i>
+						Dashboard	
+					</li>
+					<li>
+						<i class="fa fa-file-text" aria-hidden="true"></i>
+						Pages
+						<span class="posts-count">12</span>
+						
+					</li>
+					<li>
+						<i class="fa fa-pencil" aria-hidden="true"></i>
+						Posts
+						<span class="posts-count">33</span>
+					</li>
+					<li>
+						<i class="fa fa-user" aria-hidden="true"></i>
+						Users
+						<span class="posts-count">203</span>
+					</li>
+				</ul>
+
+				<div class="progressBlock">
+					<h2>Disk Space Used</h2>
+					<div class="progress-bar" >
+						<div class="progress" id="diskProgress">
+							60%
+						</div>
+					</div>
+					<h2>Bandwidth Used</h2>
+					<div class="progress-bar" id="Bandwidth">
+						<div class="progress" id="percent">
+							40%	
+						</div>
+					</div>
+				</div>
+			</aside>
+
+			<section>
+				<div>Pages</div>
+				<input id="filter"
+					type="text" placeholder="Filter Pages..."
+				>
+				<table>
+					<tr>
+						<th>Title</th>
+						<th>Published</th>
+						<th>Created</th>
+						<th></th>
+					</tr>
+
+					<tr>
+						<td>Home</td>
+						<td><i class="fa fa-check" aria-hidden="true"></i></td>
+						<td>Dec 12, 2016</td>
+						<td>
+							<input class="editBtn" type="button" value="Edit">
+							<input class="deleteBtn" type="button" value="Delete">
+						</td>
+					</tr>	
+					<tr>
+						<td>About</td>
+						<td><i class="fa fa-check" aria-hidden="true"></i></td>
+						<td>Dec 13, 2016</td>
+						<td>
+							<input class="editBtn" type="button" value="Edit">
+							<input class="deleteBtn" type="button" value="Delete">
+						</td>
+					</tr>
+					<tr>
+						<td>Services</td>
+						<td><i class="fa fa-times" aria-hidden="true"></i></td>
+						<td>Dec 13, 2016</td>
+						<td>
+							<input class="editBtn" type="button" value="Edit"
+							>
+							<input class="deleteBtn" type="button" value="Delete">
+						</td>
+					</tr>
+					<tr>
+						<td>Contact</td>
+						<td><i class="fa fa-check" aria-hidden="true"></i></td>
+						<td>Dec 14, 2016</td>
+						<td>
+							<input  class="editBtn" type="button" value="Edit">
+							<input class="deleteBtn" type="button" value="Delete">
+						</td>
+					</tr>
+				</table>
+			</section>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>	
+</body>
+</html>

@@ -1,0 +1,101 @@
+@media screen and(max-width: 480px){
+	.header{
+		.navbar-menu{
+			width: 100%;	
+			height: 25px;
+			padding: 10px 0;
+
+			#menu-bars{
+				display: block;
+				float: right;
+				margin-right: 30px;
+				z-index: 10;
+			}
+			.nav{
+				display: none;
+				position: absolute;
+				top: 45px;
+				z-index: 3;
+				background: $backgroungTitle;
+
+				&.open{
+					display: block;
+				}
+
+				li{
+					width: 96%;
+					
+					.menu-list{
+						display: block;
+						width: 93%;
+					}
+					&.right{
+						float: none;
+					}
+					&:last-child{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.manage-block{
+		text-align: center;
+
+		.logo{
+			width: 100%;
+			padding: 10px 0 10px 5px;
+			box-sizing: border-box;
+
+			h1{
+				display: block;
+			}
+			h2{
+				display: block;
+				margin-bottom: 10px;
+			}
+			#dropdownContent{
+				float: none;
+			}
+		}
+	}
+	.content{
+		width: 100%;
+		padding: 0 5px;
+		box-sizing: border-box;
+
+		.search{
+			width: 90%;
+		}
+		aside{
+			float: none;
+			width: 100%;
+			margin-bottom: 15px;
+
+			.post-list{
+				li{
+					padding: 10px;
+				}
+			}
+		}
+		section{
+			float: none;
+			width: 100%;
+
+			#filter{
+				width: 90%;
+				margin-bottom: 20px;
+			}
+			table{
+				width: 100%;
+				margin: 0;
+				margin-bottom: 10px;
+				box-sizing: border-box;
+
+				.deleteBtn{
+					display: none;
+				}
+			}
+		}
+	}
+}
